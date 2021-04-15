@@ -23,7 +23,7 @@ public class ProducerScheduler {
     KafkaProducer producer;
 
     /**
-     * 하루에 한번씩 DB에서 데이터를 읽어와 KAFKA로 데이터를 쏘는 PRODUCER
+     * 하루에 한번씩(오전 8시) DB에서 데이터를 읽어와 KAFKA로 데이터를 쏘는 PRODUCER
      */
     @Scheduled(cron = "0 0 8 * * *")
     public void mySQLtoKafka() {
